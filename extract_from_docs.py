@@ -40,8 +40,16 @@ def main():
 
     if lexicon == 'emolex':
         lex = nrc.parse_emolex()
-    elif lexicon == 'LIWC2007':        
+    elif lexicon == 'liwc2007':        
         lex = liwc.parse_liwc("2007")
+    elif lexicon == 'liwc2015':        
+        lex = liwc.parse_liwc("2015")
+    elif lexicon == 'optpess':
+        lex = nrc.parse_optpess()
+    elif lexicon == 'agency':
+        lex = conno.parse_connotation("agency")
+    elif lexicon == 'auth':
+        lex = conno.parse_connotation("authority")
 
     docs = read_jsonlist(infile)
     key_counter = set()
