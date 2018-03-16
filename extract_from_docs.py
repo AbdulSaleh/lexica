@@ -48,7 +48,7 @@ def main():
 
     values_list = []
 
-    for i, doc in enumerate(docs[:100]):
+    for i, doc in enumerate(docs):
         if i % 1000 == 0 and i > 0:
             print(i)
         text = doc['text']
